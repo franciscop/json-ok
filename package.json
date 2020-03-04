@@ -1,5 +1,5 @@
 {
-  "name": "ok-json",
+  "name": "json-ok",
   "version": "0.1.0",
   "description": "A quick way of validating json objects using json-schema",
   "homepage": "https://github.com/franciscop/ok-json#readme",
