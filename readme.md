@@ -1,6 +1,6 @@
 # json-ok [![npm install json-ok](https://img.shields.io/badge/npm%20install-react--test-blue.svg)](https://www.npmjs.com/package/json-ok) [![test badge](https://github.com/franciscop/json-ok/workflows/tests/badge.svg)](https://github.com/franciscop/json-ok/actions) [![gzip size](https://img.badgesize.io/franciscop/json-ok/master/index.min.js.svg?compression=gzip)](https://github.com/franciscop/json-ok/blob/master/index.min.js)
 
-A tiny but quick way of validating json objects using `json-schema`:
+A quick way of validating json objects using `json-schema`:
 
 ```js
 import ok from 'json-ok';
@@ -31,18 +31,26 @@ module.exports = app.post('/users/', function (req, res) {
 
 // Server.js -> createUser.js
 module.exports = post('/users/', async ctx => {
-  ok(req.body, bodySchema);
+  ok(ctx.body, bodySchema);
   await db.users.add(ctx.body);
   return 201;
 });
 ```
 
 
-## Questions
-
-### Differences between this and `jsonschema`
-
 This library is a thin wrapper around `jsonschema` with these improvements:
 
 - Throws errors instead of returning them.
 - Single, foolproof API `ok(obj, schema)`.
+
+
+You might also be interested on [`json-chaos`](https://www.npmjs.com/package/json-chaos) to test your schema:
+
+```js
+import chaos from 'json-chaos';
+
+const person = { name: 'John', age: 21 };
+
+console.log(chaos(person));
+// { name: 45423, age: true }
+```
