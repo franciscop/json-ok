@@ -10,4 +10,16 @@ describe("json-ok", () => {
     const schema = { type: "string" };
     expect(() => ok(data, schema)).toThrow();
   });
+
+  it("throws an actual error", () => {
+    const data = 24;
+    const schema = { type: "string" };
+    let err;
+    try {
+      ok(data, schema);
+    } catch (error) {
+      err = error;
+    }
+    expect(err).toBeInstanceOf(Error);
+  });
 });

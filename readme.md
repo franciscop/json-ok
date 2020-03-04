@@ -42,6 +42,7 @@ This library is a thin wrapper around `jsonschema` with these improvements:
 
 - Throws errors instead of returning them.
 - Single, foolproof API `ok(obj, schema)`.
+- It throws an actual Error instead of [a random object](https://github.com/tdegrunt/jsonschema/issues/105).
 
 
 You might also be interested on [`json-chaos`](https://www.npmjs.com/package/json-chaos) to test your schema:

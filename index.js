@@ -4,5 +4,5 @@ export default function ok(data, schema) {
   const { errors } = validate(data, schema);
   if (!errors.length) return;
   const error = errors[0];
-  throw error;
+  throw new Error(error.stack);
 }
