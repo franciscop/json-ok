@@ -1,0 +1,51 @@
+{
+  "name": "ok-json",
+  "version": "0.1.0",
+  "description": "A quick way of validating json objects using json-schema",
+  "homepage": "https://github.com/franciscop/ok-json#readme",
+  "repository": "https://github.com/franciscop/ok-json.git",
+  "bugs": "https://github.com/franciscop/ok-json/issues",
+  "funding": "https://www.paypal.me/franciscopresencia/19",
+  "author": "Francisco Presencia <public@francisco.io> (https://francisco.io/)",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c && npm run size",
+    "size": "echo $(gzip -c index.min.js | wc -c) bytes",
+    "start": "jest --watch",
+    "test": "jest --coverage"
+  },
+  "keywords": [
+    "json",
+    "schema",
+    "validation",
+    "object",
+    "structure"
+  ],
+  "main": "index.min.js",
+  "files": [],
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.4.4",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.8.0",
+    "jsonschema": "^1.2.5",
+    "rollup": "^1.21.4",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-node-resolve": "^4.2.4",
+    "rollup-plugin-terser": "^5.2.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  }
+}
