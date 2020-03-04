@@ -3,6 +3,8 @@
 A tiny but quick way of validating json objects using `json-schema`:
 
 ```js
+import ok from 'json-ok';
+
 ok(24, { type: "number" });
 // No issue
 
