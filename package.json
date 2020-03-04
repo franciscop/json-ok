@@ -21,6 +21,7 @@
     "object",
     "structure"
   ],
+  "type": "module",
   "main": "index.min.js",
   "files": [],
   "dependencies": {},
