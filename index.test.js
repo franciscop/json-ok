@@ -1,6 +1,6 @@
 import ok from "./index.js";
 
-describe("ok-json", () => {
+describe("json-ok", () => {
   it("validates correctly", () => {
     expect(() => ok(24, { type: "number" })).not.toThrow();
   });
