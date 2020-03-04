@@ -1,6 +1,6 @@
 {
   "name": "json-ok",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A quick way of validating json objects using json-schema",
   "homepage": "https://github.com/franciscop/json-ok#readme",
   "repository": "https://github.com/franciscop/json-ok.git",
