@@ -22,4 +22,17 @@ describe("json-ok", () => {
     }
     expect(err).toBeInstanceOf(Error);
   });
+
+  it("throws a validation error", () => {
+    const data = 24;
+    const schema = { type: "string" };
+    let err;
+    try {
+      ok(data, schema);
+    } catch (error) {
+      err = error;
+    }
+    expect(err.name).toBe("ValidationError");
+    expect(err.constructor.name).toBe("ValidationError");
+  });
 });
