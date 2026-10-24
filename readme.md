@@ -1,4 +1,4 @@
-# json-ok [![npm install json-ok](https://img.shields.io/badge/npm%20install-react--test-blue.svg)](https://www.npmjs.com/package/json-ok) [![test badge](https://github.com/franciscop/json-ok/workflows/tests/badge.svg)](https://github.com/franciscop/json-ok/actions) [![gzip size](https://img.badgesize.io/franciscop/json-ok/master/index.min.js.svg?compression=gzip)](https://github.com/franciscop/json-ok/blob/master/index.min.js)
+# json-ok [![npm install json-ok](https://img.shields.io/badge/npm%20install-react--test-blue.svg)](https://www.npmjs.com/package/json-ok) [![test badge](https://github.com/franciscop/json-ok/workflows/tests/badge.svg)](https://github.com/franciscop/json-ok/actions) [![gzip size](https://img.badgesize.io/franciscop/json-ok/master/index.min.js.svg?compression=gzip)](https://github.com/franciscop/json-ok/blob/master/index.min.js) [![deps](https://img.shields.io/badge/deps-0-limegreen.svg)](https://github.com/franciscop/json-ok/blob/master/package.json)
 
 A quick way of validating json objects using `json-schema`:
 
