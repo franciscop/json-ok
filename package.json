@@ -1,6 +1,6 @@
 {
   "name": "json-ok",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A quick way of validating json objects using json-schema",
   "repository": "github:franciscop/json-ok",
   "author": "Francisco Presencia <public@francisco.io> (https://francisco.io/)",
