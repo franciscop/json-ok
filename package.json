@@ -14,39 +14,19 @@
     "structure"
   ],
   "scripts": {
-    "build": "rollup -c && npm run size",
+    "build": "bun build index.js --outfile=index.min.js --minify --format=esm && npm run size && npm run build:prettier",
+    "build:prettier": "prettier --write index.js *.json",
     "size": "echo $(gzip -c index.min.js | wc -c) bytes",
-    "start": "jest --watch",
-    "test": "jest --coverage",
+    "start": "bun test --watch",
+    "test": "bun test --coverage",
     "lint": "oxlint index.js"
   },
   "main": "index.min.js",
   "type": "module",
   "files": [],
-  "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.4.4",
-    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "@babel/preset-env": "^7.4.4",
-    "babel-jest": "^24.9.0",
-    "jest": "^24.8.0",
-    "jsonschema": "^1.2.5",
+    "jsonschema": "^1.5.0",
     "oxlint": "^1.89.0",
-    "rollup": "^1.21.4",
-    "rollup-plugin-commonjs": "^9.3.4",
-    "rollup-plugin-node-resolve": "^4.2.4",
-    "rollup-plugin-terser": "^5.2.0"
-  },
-  "babel": {
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "targets": {
-            "node": "current"
-          }
-        }
-      ]
-    ]
+    "prettier": "^3.9.10"
   }
 }
